@@ -45,3 +45,16 @@ console.log(typeof year);
 
 console.log(typeof null);
 */
+let age = 30;
+age = 31;
+
+const now = 2037;
+const ageJonas = now - 1991;
+const ageSarah = now - 2018;
+console.log(ageJonas, ageSarah);
+
+console.log(ageJonas * 2, ageJonas / 2);
+
+const firstName = "Jonas";
+const lastName = "Schmedtman";
+console.log(firstName + " " + lastName);
