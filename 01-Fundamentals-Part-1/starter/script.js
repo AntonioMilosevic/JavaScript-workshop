@@ -110,4 +110,9 @@ console.log('String with \n\
   /*
   */
 
-  
+const age = 19;
+const isOldEnough = age >= 18;
+
+if (isOldEnough) {
+  console.log("Sarah can take driving licence");
+}
