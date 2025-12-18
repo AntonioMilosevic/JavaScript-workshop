@@ -196,4 +196,12 @@ console.log(typeof favorite);
 
 if (favorite == 27) {
   console.log("Cool! 27 is great number!");
+} else if (favorite == 7) {
+  console.log("7 is also a cool number");
+} else if (favorite == 9) {
+  console.log("9 is also a cool number");
+} else {
+  console.log("Number is not 27 or 7 or 9");
 }
+
+if (favorite !== 27) console.log("Why not 27?");
