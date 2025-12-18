@@ -189,3 +189,11 @@ const age = 18;
 if (age === 18) console.log("You just became an adult :D(strict)");
 
 if (age == 18) console.log("You just became and adult :D (loose)");
+
+const favorite = prompt("What's your favorite number?");
+console.log(favorite);
+console.log(typeof favorite);
+
+if (favorite == 27) {
+  console.log("Cool! 27 is great number!");
+}
