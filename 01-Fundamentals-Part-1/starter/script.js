@@ -271,7 +271,7 @@ switch (day) {
   default:
     console.log("Not a valid day");
 }
-*/
+
 
 3 + 4;
 1991;
@@ -283,3 +283,9 @@ if (23 > 10) {
 
 const me = "Jonas";
 console.log("I'm (2037-1991) years old (me)");
+*/
+
+const age = 23;
+age >= 18
+  ? console.log("I like to drink wine")
+  : console.log("I like to drink water");
