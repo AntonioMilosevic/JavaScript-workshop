@@ -202,7 +202,7 @@ console.log(bills, tips);
 
 const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
 console.log(bills, tips, totals);  */
-
+/*
 const Jonas = {
   firstName: "Jonas",
   lastName: "Schmdt",
@@ -239,3 +239,23 @@ console.log(Jonas);
 console.log(
   `${Jonas.firstName} has ${Jonas.friends.length} friends, and his best friend is called ${Jonas.friends[0]}`
 );
+*/
+const Jonas = {
+  firstName: "Jonas",
+  lastName: "Schmdt",
+  birthYear: 1991,
+  job: "teacher",
+  friends: ["Michael", "Peter", "Jon"],
+  hasDriversLicence: true,
+
+  // calcAge: function (birthYear) {
+  // return 2037 - birthYear;
+  //},
+
+  calcAge: function () {
+    console.log(this);
+    return 2037 - this.birthYear;
+  },
+};
+
+console.log(Jonas.calcAge());
