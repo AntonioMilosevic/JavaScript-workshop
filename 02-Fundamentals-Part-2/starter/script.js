@@ -293,3 +293,13 @@ mark.calcBMI();
 jon.calcBMI();
 
 console.log(mark.bmi, jon.bmi);
+
+if (mark.bmi > jon.bmi) {
+  console.log(
+    `${mark.fullName}'s BMI (${mark.bmi}) is higher than ${jon.fullName}'s BMI (${jon.bmi})}`
+  );
+} else if (jon.bmi > mark.bmi) {
+  console.log(
+    `${jon.fullName}'s BMI (${jon.bmi}) is higher than ${mark.fullName}'s BMI (${mark.bmi})}`
+  );
+}
