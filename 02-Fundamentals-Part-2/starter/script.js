@@ -319,7 +319,7 @@ console.log("Lifting weights repetition 10");
 for (let rep = 1; rep <= 10; rep++) {
   console.log(`Lifting weights repetition ${rep}💪`);
 } */
-
+/*
 const jonas = [
   "Jonas",
   "Schemdtmn",
@@ -332,7 +332,7 @@ const jonas = [
 //console.log(jonas[1])
 //...
 //console.log(jonas[4])
-
+/*
 for (let i = 0; i < 5; i++) {
   console.log(jonas[i], typeof [i]);
 }
@@ -356,4 +356,25 @@ console.log("Break the number");
 for (let i = 0; i < jonas.length; i++) {
   if (typeof jonas[i] == "number") break;
   console.log(jonas[i], typeof jonas[i]);
+} */
+
+const jonas = [
+  "Jonas",
+  "Schemdtmn",
+  2037 - 1991,
+  "teacher",
+  ["Michael", "Peter", "Steven"],
+];
+
+//4, 3 , ... 0
+for (let i = jonas.length - 1; i >= 0; i--) {
+  console.log(i, jonas[i]);
+}
+
+for (let exercise = 1; exercise < 4; exercise++) {
+  console.log(`-------Starting exercise ${exercise}`);
+
+  for (let rep = 1; rep < 6; rep++) {
+    console.log(`Exercise ${exercise}: Lifting weights repetition ${rep}`);
+  }
 }
