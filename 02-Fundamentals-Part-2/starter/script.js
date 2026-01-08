@@ -396,3 +396,17 @@ while (dice !== 6) {
   dice = Math.trunc(Math.random() * 6) + 1;
   if (dice === 6) console.log("Loop is about to end ..");
 }
+
+for (let exercise = 1; exercise < 4; exercise++) {
+  console.log(`-------Starting exercise ${exercise}`);
+
+  for (let rep = 1; rep < 6; rep++) {
+    console.log(`Exercise ${exercise}: Lifting weights repetition ${rep}`);
+  }
+
+  for (let set = 1; rep < 3; set++) {
+    console.log(
+      `Biceps curl ${set}: Lifting weights repetition per set ${set}`
+    );
+  }
+}
