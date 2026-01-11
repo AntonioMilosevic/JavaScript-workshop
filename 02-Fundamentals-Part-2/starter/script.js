@@ -411,7 +411,7 @@ for (let exercise = 1; exercise < 4; exercise++) {
 //to calculate tips and total values (bill + tip) for every bill value in the bills array.
 //Use a for loop to perform the 10 calculations!
 //TEST DATA: 22, 295, 176, 440, 37, 105, 10, 1100, 86, and 52
-
+/*
 const calcTip = function (bill) {
   return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
 };
@@ -440,3 +440,31 @@ const calcAverage = function (arr) {
 console.log(calcAverage([2, 3, 6]));
 console.log(calcAverage(totals));
 console.log(calcAverage(tips));
+*/
+
+// funkcije
+function logger() {
+  console.log("My name is Jonas");
+}
+
+//calling, running the function
+logger();
+logger();
+logger();
+
+function fruitProcessor(apples, oranges) {
+  console.log(apples, oranges);
+  const juice = `Juice with ${apples} apples and ${oranges} oranges`;
+  return juice;
+}
+
+const appleJuice = fruitProcessor(5, 0);
+console.log(appleJuice);
+
+function fruitProcessor(oranges, apples) {
+  console.log(oranges, apples);
+  const juice = `Juice with ${oranges} oranges and ${apples} apples`;
+  return juice;
+}
+const appleOrangeJuice = fruitProcessor(11, 6);
+console.log(appleOrangeJuice);
