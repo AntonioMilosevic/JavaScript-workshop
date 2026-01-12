@@ -441,7 +441,7 @@ console.log(calcAverage([2, 3, 6]));
 console.log(calcAverage(totals));
 console.log(calcAverage(tips));
 */
-
+/*
 // funkcije
 function logger() {
   console.log("My name is Jonas");
@@ -468,3 +468,21 @@ function fruitProcessor(oranges, apples) {
 }
 const appleOrangeJuice = fruitProcessor(11, 6);
 console.log(appleOrangeJuice);
+*/
+function calcAge1(birthYear) {
+  return 2037 - birthYear;
+}
+
+const age1 = calcAge1(1991);
+console.log(age1); //function declaration***
+
+const calcAge2 = function (birthYear) {
+  // function expression***
+  return 2037 - birthYear;
+};
+
+const age2 = calcAge2(1991);
+console.log(age1, age2);
+
+// arrow function ***
+const calcAge3 = (birthYear) => 2037 - birthYear;
