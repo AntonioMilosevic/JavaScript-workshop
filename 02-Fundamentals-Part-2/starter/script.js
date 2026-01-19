@@ -548,7 +548,7 @@ const yearsUntilRetirement = (birthYear, firstName) => {
 
 console.log(yearsUntilRetirement(1991, "Jonas"));
 console.log(yearsUntilRetirement(1980, "Bob")); */
-
+/*
 const calcAverage = (a, b, c) => (a + b + c) / 3;
 console.log(calcAverage(3, 4, 5));
 
@@ -565,4 +565,10 @@ const checkWinner = function (avgDolphins, avgKoalas) {
     console.log(`No one wins...`);
   }
 };
-checkWinner(scoreDolphins, scoreKoalas)
+checkWinner(scoreDolphins, scoreKoalas);  */
+
+const friends = ["Marko", "Milous", "Mrnjau"];
+console.log(friends);
+
+console.log(friends[(0, 1)]);
+console.log(friends[2]);
