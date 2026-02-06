@@ -14,17 +14,23 @@ let secretNumber = Math.trunc(Math.random() * 20) + 1;
 let score = 20;
 let highscore = 0;
 
+const displayMessage = function (message) {
+  document.querySelector('.message').textContent = message;
+};
+
 document.querySelector('.check').addEventListener('click', function () {
   const guess = Number(document.querySelector('.guess').value);
   console.log(guess, typeof guess);
 
   // when there is no input
   if (!guess) {
-    document.querySelector('.message').textContent = 'No number!';
+    //  document.querySelector('.message').textContent = 'No number!';
+    displayMessage = 'No number!';
 
     // when player wins
   } else if (guess === secretNumber) {
-    document.querySelector('.message').textContent = 'Correct number';
+   // document.querySelector('.message').textContent = 'Correct number';
+    displayMessage = 'Correct number';
     document.querySelector('.number').textContent = secretNumber;
 
     //css
