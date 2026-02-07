@@ -3,5 +3,8 @@
 const modal = document.querySelector('.modal');
 const overlay = document.querySelector('.overlay');
 const btnCloseModal = document.querySelector('.close-modal');
-const btnsOpenModal = document.querySelector('open-modal');
+const btnsOpenModal = document.querySelector('.show-modal');
 console.log(btnsOpenModal);
+
+for (let i = 0; i < btnsOpenModal.lenght; i++)
+  console.log(btnsOpenModal[i].textContent);
