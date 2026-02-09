@@ -43,7 +43,7 @@ overlay.addEventListener(
 
 document.addEventListener('keydown', function (e) {
   console.log(e.key); // pokazuje koje dugme je pritisnuto
-  if (e.key === 'Escape') {
-    if (!modal.classList.contains('hidden')) closeModal();
+  if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+    closeModal();
   }
 });
