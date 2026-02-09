@@ -6,17 +6,25 @@ const btnCloseModal = document.querySelector('.close-modal');
 const btnsOpenModal = document.querySelectorAll('.show-modal');
 console.log(btnsOpenModal);
 
-for (let i = 0; i < btnsOpenModal.length; i++)
-  btnsOpenModal[i].addEventListener('click', function () {
-    console.log('Button clicked');
-    modal.classList.remove('hidden'); // bez tacke '.hidden'
-    overlay.classList.remove('hidden');
-  });
+const openModal = function () {
+  console.log('Button clicked');
+  modal.classList.remove('hidden');
+  overlay.classList.remove('hidden');
+};
 
 const closeModal = function () {
   modal.classList.add('hidden');
   overlay.classList.add('hidden');
 };
+
+for (let i = 0; i < btnsOpenModal.length; i++)
+  btnsOpenModal[i].addEventListener(
+    'click',
+    openModal,
+    // console.log('Button clicked');
+    // modal.classList.remove('hidden'); // bez tacke '.hidden'
+    // overlay.classList.remove('hidden');
+  );
 
 btnCloseModal.addEventListener(
   'click',
@@ -25,6 +33,7 @@ btnCloseModal.addEventListener(
   //overlay.classList.add('hidden');
 );
 
+// ove kose linije od linije prave "komentar"
 overlay.addEventListener(
   'click',
   closeModal,
