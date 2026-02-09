@@ -40,3 +40,7 @@ overlay.addEventListener(
   // modal.classList.add('hidden');
   // overlay.classList.add('hidden');
 );
+
+document.addEventListener('keydown', function () {
+  console.log('A key was pressed');
+});
