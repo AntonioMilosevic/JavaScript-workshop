@@ -41,6 +41,9 @@ overlay.addEventListener(
   // overlay.classList.add('hidden');
 );
 
-document.addEventListener('keydown', function () {
-  console.log('A key was pressed');
+document.addEventListener('keydown', function (e) {
+  console.log(e.key); // pokazuje koje dugme je pritisnuto
+  if (e.key === 'Escape') {
+    if (!modal.classList.contains('hidden')) closeModal();
+  }
 });
