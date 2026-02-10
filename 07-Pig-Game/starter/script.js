@@ -12,3 +12,14 @@ const btnHold = document.querySelector('.btn--hold');
 score0El.textContent = 0;
 score1El.textContent = 0;
 diceEl.classList.add('hidden');
+
+// rolling dice funcionality
+btnRoll.addEventListener('click', function () {
+  //1.generating a random dice roll
+  const dice = Math.trunc(Math.random() * 6) + 1;
+  console.log(dice)
+  
+  //2.Display dice
+
+  //3.check for roll 1: if true, switch to next player
+});
