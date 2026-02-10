@@ -33,7 +33,7 @@ btnCloseModal.addEventListener(
   //overlay.classList.add('hidden');
 );
 
-// ove kose linije od linije prave "komentar"
+
 overlay.addEventListener(
   'click',
   closeModal,
