@@ -22,6 +22,14 @@ const scores = [0, 0];
 let currentScore = 0;
 let activePlayer = 0;
 
+const switchPlayer = function () {
+  document.getElementById(`current--${activePlayer}`).textContent = 0;
+  activePlayer = activePlayer === 0 ? 1 : 0;
+  currentScore = 0;
+  player0El.classList.toggle('player--active');
+  player1El.classList.toggle('player--active');
+};
+
 // rolling dice funcionality
 btnRoll.addEventListener('click', function () {
   //1.generating a random dice roll
@@ -40,19 +48,16 @@ btnRoll.addEventListener('click', function () {
       currentScore;
   } else {
     // switch to other player
-    document.getElementById(`current--${activePlayer}`).textContent = 0;
-    activePlayer = activePlayer === 0 ? 1 : 0;
-    currentScore = 0;
-    player0El.classList.toggle('player--active');
-    player1El.classList.toggle('player--active');
+    switchPlayer;
   }
 });
 
 btnHold.addEventListener('click', function () {
   // add current score to the score of the active player's score
-
+  scores[activePlayer] += currentScore;
+  document.getElementById(`current--${activePlayer}`).textContent =
+    scores[activePlayer];
   // check if player's score is >=100 , finish the game
 
   // or switch to another player
-
 });
