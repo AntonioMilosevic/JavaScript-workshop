@@ -4,8 +4,13 @@ function calcAge(birthYear) {
   const age = 2037 - birthYear;
 
   function printAge() {
-    const output = `You are ${age}, born in ${birthYear}`;
+    const output = `${firstName},You are ${age}, born in ${birthYear}`;
     console.log(output);
+
+    if (birthYear >= 1981 && birthYear <= 1996) {
+      const str = `Oh, ${firstName} you are millenial`;
+      console.log(str);
+    }
   }
   printAge();
 
