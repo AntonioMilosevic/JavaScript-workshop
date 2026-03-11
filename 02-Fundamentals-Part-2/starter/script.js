@@ -514,25 +514,25 @@ function fruitProcessor(apples, oranges) {
 
 console.log(fruitProcessor(2, 3));
 */
-const calcAge = function (birthYear) {
-  return 2037 - birthYear;
-};
+// const calcAge = function (birthYear) {
+//   return 2037 - birthYear;
+// };
 
-const yearsUntilRetirement = function (birthYear, firstName) {
-  const age = calcAge(birthYear);
-  const retirement = 65 - age;
+// const yearsUntilRetirement = function (birthYear, firstName) {
+//   const age = calcAge(birthYear);
+//   const retirement = 65 - age;
 
-  if (retirement > 0) {
-    return retirement;
-    console.log(`${firstName} retires in ${retirement} years`);
-  } else {
-    return -1;
-    console.log(`${firstName} has already retired`);
-  }
-};
+//   if (retirement > 0) {
+//     return retirement;
+//     console.log(`${firstName} retires in ${retirement} years`);
+//   } else {
+//     return -1;
+//     console.log(`${firstName} has already retired`);
+//   }
+// };
 
-console.log(yearsUntilRetirement(1991, "Jonas"));
-console.log(yearsUntilRetirement(1960, "Mike"));
+// console.log(yearsUntilRetirement(1991, "Jonas"));
+// console.log(yearsUntilRetirement(1960, "Mike"));
 /*
 // arrow function ***
 const calcAge3 = (birthYear) => 2037 - birthYear;
@@ -567,8 +567,8 @@ const checkWinner = function (avgDolphins, avgKoalas) {
 };
 checkWinner(scoreDolphins, scoreKoalas);  */
 
-const friends = ["Marko", "Milous", "Mrnjau"];
-console.log(friends);
+// const friends = ["Marko", "Milous", "Mrnjau"];
+// console.log(friends);
 
-console.log(friends[(0, 1)]);
-console.log(friends[2]);
+// console.log(friends[(0, 1)]);
+// console.log(friends[2]);
