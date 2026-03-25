@@ -569,6 +569,3 @@ checkWinner(scoreDolphins, scoreKoalas);  */
 
 // const friends = ["Marko", "Milous", "Mrnjau"];
 // console.log(friends);
-
-// console.log(friends[(0, 1)]);
-// console.log(friends[2]);
