@@ -570,7 +570,28 @@ checkWinner(scoreDolphins, scoreKoalas);  */
 // const friends = ["Marko", "Milous", "Mrnjau"];
 // console.log(friends);
 
-const data1 = [17, 21, 23];
-const data2 = [12, 5, -5, 0, 4];
+// const data1 = [17, 21, 23];
+// const data2 = [12, 5, -5, 0, 4];
 
-console.log("${data1[0]}Celz...${data1[1]}Celz...${data1[2]}Celz...");
+// console.log(`${data1[0]}Celz ... ${data1[1]}Celz ... ${data1[2]}Celz ...`);
+
+// const printForecast = function (arr) {
+//   let str = "";
+//   for (let i = 0; i < arr.lenght; i++) {
+//     str = str + `${arr[i]}Celz} in ${i + 1} days ...`;
+//   }
+//   console.log("..." + str);
+// };
+// printForecast(data1);
+// ovo je lekcija 5 ,64
+
+const measureKelvin = function () {
+  const measurement = {
+    type: "temperature",
+    unit = 'celsius'
+    value = Number(prompt('Degrees celsius:'))
+  };
+  const kelvin = measurement.value + 273
+  return kelvin
+};
+console.log(measureKelvin())
