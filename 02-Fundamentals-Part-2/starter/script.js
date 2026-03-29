@@ -585,13 +585,35 @@ checkWinner(scoreDolphins, scoreKoalas);  */
 // printForecast(data1);
 // ovo je lekcija 5 ,64
 
-const measureKelvin = function () {
-  const measurement = {
-    type: "temperature",
-    unit = 'celsius'
-    value = Number(prompt('Degrees celsius:'))
-  };
-  const kelvin = measurement.value + 273
-  return kelvin
-};
-console.log(measureKelvin())
+// const measureKelvin = function () {
+//   const measurement = {
+//     type: "temperature",
+//     unit = 'celsius'
+//     value = Number(prompt('Degrees celsius:'))
+//   };
+//   const kelvin = measurement.value + 273
+//   return kelvin
+// };
+// console.log(measureKelvin())
+
+// Store Mark's and John's mass and height in variables called massMark, heightMark, massJohn and heightJohn.
+
+// Calculate both their BMIs using the formula, and store the results in two variables called BMIMark and BMIJohn.
+
+// Log the value of BMIMark and BMIJohn to the console.
+
+// BONUS: Create a boolean variable markHigherBMI containing information about whether Mark has a higher BMI than John. Log it to the console too
+
+// TEST DATA 1: Marks weighs 78 kg and is 1.69 m tall. John weighs 92 kg and is 1.95 m tall.
+
+// TEST DATA 2: Marks weights 95 kg and is 1.88 m tall. John weights 85 kg and is 1.76 m tall.
+
+const massMark = "78";
+const massJohn = "95";
+const heightMark = "169";
+const heightJohn = "188";
+
+const BMIMark = massMark / (heightMark * heightMark);
+const BMIJohn = massJohn / (heightJohn * heightJohn);
+
+console.log(BMIMark);

@@ -89,7 +89,7 @@ const BMIJohn = massJohn / (heightJohn * heightJohn);
 const markHigherBMI = BMIMark > BMIJohn;
 console.log(BMIMark, BMIJohn, markHigherBMI);
 
-z
+
 const firstName = "Jonas";
 const job = "teacher";
 const birthYear = "1991";
