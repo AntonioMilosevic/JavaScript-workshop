@@ -21,8 +21,6 @@ function calcAge(birthYear) {
       function add(a, b) {
         return a + b;
       }
-
-      
     }
   }
   printAge();
@@ -30,5 +28,5 @@ function calcAge(birthYear) {
   return age;
 }
 
-const firstName = 'Jonas';
+const firstName = 'Mich';
 calcAge(1991);
