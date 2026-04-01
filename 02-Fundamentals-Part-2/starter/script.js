@@ -608,12 +608,32 @@ checkWinner(scoreDolphins, scoreKoalas);  */
 
 // TEST DATA 2: Marks weights 95 kg and is 1.88 m tall. John weights 85 kg and is 1.76 m tall.
 
-const massMark = "78";
-const massJohn = "95";
-const heightMark = "169";
-const heightJohn = "188";
+// const massMark = "78";
+// const massJohn = "95";
+// const heightMark = "169";
+// const heightJohn = "188";
 
-const BMIMark = massMark / (heightMark * heightMark);
-const BMIJohn = massJohn / (heightJohn * heightJohn);
+// const BMIMark = massMark / (heightMark * heightMark);
+// const BMIJohn = massJohn / (heightJohn * heightJohn);
 
-console.log(BMIMark);
+// console.log(BMIMark);
+
+console.log(this);
+
+const calcAge = function (birthYear) {
+  console.log(2037 - birthYear);
+  console.log(this);
+};
+calcAge(1991);
+//  var firstName = 'Matilda'
+
+// const jonas = {
+//   firstName: 'Jonas'
+//   year : 1991,
+//   calcAge: function() {
+//     console.log(this)
+//     console.log(2037-this.year)
+//   },
+// greet : ()=> console.log(`Hey ${this.firstName}())`
+// }
+// jonas.greet()
