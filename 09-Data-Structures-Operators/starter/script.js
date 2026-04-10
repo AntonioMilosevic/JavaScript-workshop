@@ -49,6 +49,12 @@ console.log(newMenu);
 const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
 console.log(menu);
 
+// iterables : arrays, maps, strings, sets, Not objects
+
+const str = 'Jonas';
+const letters = [...str, ' ', 'S.'];
+console.log(letters);
+
 // const arr = [2, 3, 4];
 // const a = arr[0];
 // const b = arr[1];
