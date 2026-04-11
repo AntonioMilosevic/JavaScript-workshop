@@ -33,6 +33,23 @@ const restaurant = {
   order: function (starterIndex, mainIndex) {
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
   },
+
+  orderDelivery: function ({
+    starterIndex = 1,
+    mainIndex = 0,
+    time = '20:00',
+    adress,
+  }) {
+    console.log(
+      `Order received! ${this.starterMenu[starterIndex]} and ${this.menu[mainIndexIndex]} will be delivered to ${adress} at ${time}`,
+    );
+  },
+
+  orderPasta: function (ing1, ing2, ing3) {
+    console.log(
+      `Here is your delicious pasta with ${ing1}, ${ing2}, and ${ing3}`,
+    );
+  },
 };
 
 const arr = [7, 8, 9];
@@ -54,6 +71,16 @@ console.log(menu);
 const str = 'Jonas';
 const letters = [...str, ' ', 'S.'];
 console.log(letters);
+
+const ingredients = [
+  prompt(`Let\'s make pasta! Ingridient 1?`),
+  prompt(`Let\'s make pasta! Ingridient 2?`),
+  prompt(`Let\'s make pasta! Ingridient 3?`),
+];
+console.log(ingredients);
+
+restaurant.orderPasta(ingredients[0], ingredients[1], ingredients[2]);
+restaurant.orderPasta(...ingredients);
 
 // const arr = [2, 3, 4];
 // const a = arr[0];
