@@ -30,6 +30,21 @@ const restaurant = {
   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
 
+  openingHours: {
+    thu: {
+      open: 12,
+      close: 22,
+    },
+    fri: {
+      open: 11,
+      close: 23,
+    },
+    sat: {
+      open: 0, // Open 24 hours
+      close: 24,
+    },
+  },
+
   order: function (starterIndex, mainIndex) {
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
   },
@@ -72,15 +87,42 @@ const str = 'Jonas';
 const letters = [...str, ' ', 'S.'];
 console.log(letters);
 
-const ingredients = [
-  prompt(`Let\'s make pasta! Ingridient 1?`),
-  prompt(`Let\'s make pasta! Ingridient 2?`),
-  prompt(`Let\'s make pasta! Ingridient 3?`),
-];
-console.log(ingredients);
+//Objects
 
-restaurant.orderPasta(ingredients[0], ingredients[1], ingredients[2]);
-restaurant.orderPasta(...ingredients);
+const { sat, ...weekdays } = restaurant.openingHours;
+console.log(weekdays);
+
+// const ingredients = [
+//   prompt(`Let\'s make pasta! Ingridient 1?`),
+//   prompt(`Let\'s make pasta! Ingridient 2?`),
+//   prompt(`Let\'s make pasta! Ingridient 3?`),
+// ];
+// console.log(ingredients);
+
+// restaurant.orderPasta(ingredients[0], ingredients[1], ingredients[2]);
+// restaurant.orderPasta(...ingredients);
+
+//objects
+
+const newRestaurant = { foundedIn: 1998, ...restaurant, founder: 'Giuseppe' };
+console.log(newRestaurant);
+
+restaurant.Copy.name = 'Ristaurante Roma';
+console.log(restaurant.Copy.name);
+console.log(restaurant.name);
+
+// Spread because ... is on right side of =
+const arr1 = [1, 2, ...[4, 5]];
+
+// Rest because ... of the left side of =
+const [a, b, ...others] = [1, 2, 3, 4, 5];
+console.log(a, b, others);
+
+const [pizza, , rissoto, otherFood] = [
+  ...restaurant.mainMenu,
+  ...restaurant.starterMenu,
+];
+console.log(pizza, rissoto, otherFood);
 
 // const arr = [2, 3, 4];
 // const a = arr[0];
@@ -113,18 +155,4 @@ restaurant.orderPasta(...ingredients);
 // main = secondary;
 // secondary = temp;
 
-//   openingHours: {
-//     thu: {
-//       open: 12,
-//       close: 22,
-//     },
-//     fri: {
-//       open: 11,
-//       close: 23,
-//     },
-//     sat: {
-//       open: 0, // Open 24 hours
-//       close: 24,
-//     },
-//   },
 // };
