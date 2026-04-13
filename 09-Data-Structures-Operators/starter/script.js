@@ -107,9 +107,9 @@ console.log(weekdays);
 const newRestaurant = { foundedIn: 1998, ...restaurant, founder: 'Giuseppe' };
 console.log(newRestaurant);
 
-restaurant.Copy.name = 'Ristaurante Roma';
-console.log(restaurant.Copy.name);
-console.log(restaurant.name);
+// restaurant.Copy.name = 'Ristaurante Roma';
+// console.log(restaurant.Copy.name);
+// console.log(restaurant.name);
 
 // Spread because ... is on right side of =
 const arr1 = [1, 2, ...[4, 5]];
@@ -156,3 +156,19 @@ console.log(pizza, rissoto, otherFood);
 // secondary = temp;
 
 // };
+
+console.log(3 || 'Jonas');
+console.log('' || 'Jonas');
+console.log(true || 0);
+console.log(undefined || null);
+
+console.log(undefined || 0 || '' || 'Jonas' || 23);
+
+restaurant.numGuests = 23;
+const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
+console.log(guests1);
+
+const guests2 = restaurant.numGuests || 10;
+console.log(guests2);
+
+
