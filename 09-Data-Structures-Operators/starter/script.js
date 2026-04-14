@@ -171,4 +171,6 @@ console.log(guests1);
 const guests2 = restaurant.numGuests || 10;
 console.log(guests2);
 
-
+for (const day of Object.keys(openingHours)) {
+  console.log(day);
+}
