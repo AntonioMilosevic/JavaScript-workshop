@@ -32,13 +32,13 @@ const restaurant = {
 
   orderDelivery({ starterIndex = 1, mainIndex = 0, time = '20:00', address }) {
     console.log(
-      `Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`
+      `Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`,
     );
   },
 
   orderPasta(ing1, ing2, ing3) {
     console.log(
-      `Here is your declicious pasta with ${ing1}, ${ing2} and ${ing3}`
+      `Here is your declicious pasta with ${ing1}, ${ing2} and ${ing3}`,
     );
   },
 
@@ -554,6 +554,24 @@ const game = {
     team2: 6.5,
   },
 };
+
+const [players1, players2] = game.players;
+console.log(players1, players2);
+
+const [gk, ...fieldPlayers] = players1;
+console.log(gk, fieldPlayers);
+
+const allPlayers = [...players1, ...players2];
+console.log(allPlayers);
+
+const players1Final = [...players1, 'Thiago', 'Coutinho', 'Perisic'];
+
+const {
+  odds: { team1, x: draw, team2 },
+} = game;
+console.log(team1, draw, team2);
+
+team1 < team2 && console.log('Team1 is more likely to win');
 
 /*
 // 1.
