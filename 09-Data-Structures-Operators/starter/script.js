@@ -233,3 +233,9 @@ const game = {
 // console.log(team1, draw, team2);
 
 // team1 < team2 && console.log('Team1 is more likely to win');
+
+const orderSet = new Set(['Pasta', 'Rissoto', 'Pizza', 'Pasta', 'Pizza']);
+
+console.log(orderSet);
+
+console.log(orderSet.size);
