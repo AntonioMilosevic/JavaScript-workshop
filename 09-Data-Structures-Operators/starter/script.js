@@ -122,7 +122,7 @@ const [pizza, , rissoto, otherFood] = [
   ...restaurant.mainMenu,
   ...restaurant.starterMenu,
 ];
-console.log(pizza, rissoto, otherFood);
+// console.log(pizza, rissoto, otherFood);
 
 // const arr = [2, 3, 4];
 // const a = arr[0];
