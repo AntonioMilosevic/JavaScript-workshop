@@ -259,5 +259,15 @@ const mexicanFoods = new Set([
 ]);
 
 const commonFoods = italianFoods.intersection(mexicanFoods);
-console.log('Intersection', commonFoods);
+console.log('Intersection:', commonFoods);
 console.log([...commonFoods]);
+
+const italianMexicanFusion = italianFoods.union(mexicanFoods);
+console.log('Union:', italianMexicanFusion);
+
+console.log([...italianFoods, ...mexicanFoods]);
+
+console.log([...new Set([...italianFoods, ...mexicanFoods])]);
+
+const uniqueItalianFoods = italianFoods.difference(mexicanFoods);
+console.log(uniqueItalianFoods);
