@@ -297,3 +297,29 @@ console.log(rest.get(1));
 
 const time = 8;
 console.log(rest.get(time > rest.get('open') && time < rest.get('closed')));
+
+console.log(rest.has('categories'));
+rest.delete(2);
+// rest.clear;
+console.log(rest);
+
+const question = new Map([
+  ['question', 'What is the best programming language in the world'],
+  [1, 'C'],
+  [2, 'Java'],
+  [3, 'JavaScript'],
+  ['correct', 3],
+  [true, 'Correct'],
+  [false, 'Try again'],
+]);
+
+console.log(question);
+
+console.log(Object.entries(restaurant.openingHours));
+const hoursMap = new Map(Object.entries(restaurant.openingHours));
+
+console.log(hoursMap);
+
+for (const [key, value] of question) {
+  if (typeof key === 'number') console.log(`Answer ${key}: ${value}`);
+}
