@@ -323,3 +323,6 @@ console.log(hoursMap);
 for (const [key, value] of question) {
   if (typeof key === 'number') console.log(`Answer ${key}: ${value}`);
 }
+
+console.log(Object.entries(restaurant.location));
+const locMap = new Map(Object.entries(restaurant.openingHours));
