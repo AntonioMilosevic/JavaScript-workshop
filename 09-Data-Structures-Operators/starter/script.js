@@ -112,7 +112,7 @@ console.log(newRestaurant);
 // console.log(restaurant.name);
 
 // Spread because ... is on right side of =
-const arr1 = [1, 2, ...[4, 5]];
+// const arr1 = [1, 2, ...[4, 5]];
 
 // Rest because ... of the left side of =
 const [a, b, ...others] = [1, 2, 3, 4, 5];
