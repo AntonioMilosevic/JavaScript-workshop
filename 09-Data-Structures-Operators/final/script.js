@@ -334,6 +334,24 @@ for (const [min, event] of gameEvents) {
   console.log(`${half}[HALF] ${min}:${event}`);
 }
 
+const airline = 'TAP Air Portugal';
+const plane = 'A320';
+
+console.log(plane[0]);
+console.log(plane[1]);
+console.log(plane[2]);
+console.log('B371'[0]);
+
+console.log(airline.length);
+console.log('B371'.length);
+
+console.log(airline.indexOf('r'));
+console.log(airline.lastIndexOf('r'));
+console.log(airline.indexOf('Portugal'));
+
+console.log(airline.slice(4));
+
+
 /*
 // 1.
 const events = [...new Set(gameEvents.values())];
