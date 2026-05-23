@@ -378,6 +378,13 @@ const passengerCorrect =
   passengerLower[0].toUpperCase() + passengerLower.slice(1);
 console.log(passengerCorrect);
 
+const email = 'hello@jonas.io';
+const loginEmail = '   Hello@jonas.io \n';
+
+const lowerEmail = loginEmail.toLocaleLowerCase();
+const trimmedEmail = lowerEmail.trim();
+console.log(trimmedEmail);
+
 /*
 // 1.
 const events = [...new Set(gameEvents.values())];
