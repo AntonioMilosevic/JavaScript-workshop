@@ -352,18 +352,18 @@ console.log(airline.indexOf('Portugal'));
 console.log(airline.slice(4));
 console.log(airline.slice(4, 7));
 
-// console.log(airline.slice(0, airline.indexOf(' ')));
-// console.log(airline.slice(airline.lastIndexOf(' ') + 1));
+console.log(airline.slice(0, airline.indexOf(' ')));
+console.log(airline.slice(airline.lastIndexOf(' ') + 1));
 
-// console.log(airline.slice(-2));
-// console.log(airline.slice(1, -1));
+console.log(airline.slice(-2));
+console.log(airline.slice(1, -1));
 
-// const checkMiddleSeat = function (seat) {
-//   // B and E are middle seats
-//   const s = seat.slice(-1);
-//   if (s === 'B' || s === 'E') console.log(`You've got middle seat`);
-//   else console.log('You got lucky');
-// };
+const checkMiddleSeat = function (seat) {
+  // B and E are middle seats
+  const s = seat.slice(-1);
+  if (s === 'B' || s === 'E') console.log(`You've got middle seat`);
+  else console.log('You got lucky');
+};
 
 checkMiddleSeat('11B');
 checkMiddleSeat('23C');
@@ -384,6 +384,16 @@ const loginEmail = '   Hello@jonas.io \n';
 const lowerEmail = loginEmail.toLocaleLowerCase();
 const trimmedEmail = lowerEmail.trim();
 console.log(trimmedEmail);
+
+const normalizedEmail = loginEmail.toLocaleLowerCase().trim();
+console.log(normalizedEmail);
+console.log(email === normalizedEmail);
+
+// replacing
+const priceGB = '288,97&';
+const priceUS = priceGB.replace('&', '$');
+
+console.log(priceUS);
 
 /*
 // 1.
