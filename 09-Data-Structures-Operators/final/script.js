@@ -391,9 +391,15 @@ console.log(email === normalizedEmail);
 
 // replacing
 const priceGB = '288,97&';
-const priceUS = priceGB.replace('&', '$');
+const priceUS = priceGB.replace('&', '$').replace(',', '.');
 
 console.log(priceUS);
+
+const announcement =
+  'All passengers come to the boarding door 23, boarding door 23';
+
+console.log(announcement.replace('door', 'gate'));
+console.log(announcement.replaceAll('door', 'gate'));
 
 /*
 // 1.
