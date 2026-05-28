@@ -401,6 +401,10 @@ const announcement =
 console.log(announcement.replace('door', 'gate'));
 console.log(announcement.replaceAll('door', 'gate'));
 
+console.log('a+very+nice+string'.split('+'));
+console.log('Jonas Schmetman'.split(' '));
+
+const [firstName, lastName] = 'Jonas Schemdtman'.split(' ');
 /*
 // 1.
 const events = [...new Set(gameEvents.values())];
