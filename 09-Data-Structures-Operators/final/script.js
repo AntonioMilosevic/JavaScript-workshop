@@ -399,12 +399,31 @@ const announcement =
   'All passengers come to the boarding door 23, boarding door 23';
 
 console.log(announcement.replace('door', 'gate'));
-console.log(announcement.replaceAll('door', 'gate'));
+// console.log(announcement.replaceAll('door', 'gate'));
+console.log(announcement.replace(/door/g, 'gate'));
+
+// // practice
+// const checkBaggage = function (items) {
+//   const baggage = items.toLocaleLowerCase;
+//   if (baggage.includes('knife') || baggage.includes('gun'))
+//     console.log('You are not allowed on board');
+//   else {
+//     console.log('Welcome aboard');
+//   }
+// };
+
+// checkBaggage('I have a laptop, some Food and a pocket Knife');
+// checkBaggage('Socks and camera');
+// checkBaggage('Got some snacks and a gun for protection');
 
 console.log('a+very+nice+string'.split('+'));
 console.log('Jonas Schmetman'.split(' '));
 
 const [firstName, lastName] = 'Jonas Schemdtman'.split(' ');
+
+const newName = ['Mr.', firstName, lastName.toLocaleUpperCase()].join(' ');
+console.log(newName);
+
 /*
 // 1.
 const events = [...new Set(gameEvents.values())];
