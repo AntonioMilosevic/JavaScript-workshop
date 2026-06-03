@@ -424,6 +424,21 @@ const [firstName, lastName] = 'Jonas Schemdtman'.split(' ');
 const newName = ['Mr.', firstName, lastName.toLocaleUpperCase()].join(' ');
 console.log(newName);
 
+const capitalizeName = function (name) {
+  const names = name.split(' ');
+  const namesUpper = [];
+
+  for (const n of names) {
+    namesUpper.push(n[0].toUpperCase() + n.slice(1));
+  }
+  console.log(namesUpper.join(' '));
+};
+
+capitalizeName('jessica and smith davies');
+capitalizeName('jonas schemdtman');
+
+// const passenger = 'jessica ann smith davies';
+
 /*
 // 1.
 const events = [...new Set(gameEvents.values())];
