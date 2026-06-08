@@ -429,13 +429,28 @@ const capitalizeName = function (name) {
   const namesUpper = [];
 
   for (const n of names) {
-    namesUpper.push(n[0].toUpperCase() + n.slice(1));
+    // namesUpper.push(n[0].toUpperCase() + n.slice(1));
+    namesUpper.push(n.replace(n[0], n[0].toLocaleUpperCase()));
   }
   console.log(namesUpper.join(' '));
 };
 
 capitalizeName('jessica and smith davies');
 capitalizeName('jonas schemdtman');
+
+// padding
+const message = 'Go to gate 23!';
+console.log(message.padStart(20, '+').padEnd(30, '+'));
+console.log('Jonas'.padStart(20, '+').padEnd(30, '+'));
+
+const maskCreditCard = function (number) {
+  const str = number + '';
+  const last = str.slice(-4);
+  return last.padStart(str.length, '*');
+};
+
+console.log(maskCreditCard(63353532));
+console.log(maskCreditCard(88484821));
 
 // const passenger = 'jessica ann smith davies';
 
