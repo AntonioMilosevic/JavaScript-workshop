@@ -452,6 +452,15 @@ const maskCreditCard = function (number) {
 console.log(maskCreditCard(63353532));
 console.log(maskCreditCard(88484821));
 
+// repeat
+const message2 = 'Bad weather.. ALl departures delayed ..';
+console.log(message2.repeat(5));
+
+// const planesInLine = function(n) {
+//   console.log()
+// }
+
+
 // const passenger = 'jessica ann smith davies';
 
 /*
