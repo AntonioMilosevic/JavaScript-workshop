@@ -456,10 +456,27 @@ console.log(maskCreditCard(88484821));
 const message2 = 'Bad weather.. ALl departures delayed ..';
 console.log(message2.repeat(5));
 
+document.body.append(document.createElement('textarea'));
+document.body.append(document.createElement('button'));
+
+console.log(text);
+
+document.querySelector('button').addEventListener('click', function () {
+  const text = document.querySelector('textarea').value;
+  const rows = text.split('\n');
+  console.log(rows);
+
+  for (const row in rows) {
+    const [first, second] = row.toLowerCase().trim().split('_');
+    const output = `${first}${second.replace(second[0], second[0].toUpperCase)}`;
+
+    console.log(output);
+  }
+});
+
 // const planesInLine = function(n) {
 //   console.log()
 // }
-
 
 // const passenger = 'jessica ann smith davies';
 
