@@ -75,4 +75,15 @@ const transformer = function (str, fn) {
   console.log(`Transformed by: ${fn.name}`);
 };
 
-transformer('JavaScript is the best', upperFirstWord);
+transformer('JavaScript is the best', upperFirstWord); 
+// u ovom slucaju upperFirstWord sluzi kao callback fn koja je pozvana preko transformera
+transformer('JavaScript is the best', oneWord);
+
+// Js uses callback all the time
+const high5 = function () {
+  console.log('✊');
+};
+
+document.body.addEventListener('click', high5);
+
+['Jonas', 'Martha', 'Adam'].forEach(high5);
