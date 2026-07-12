@@ -75,7 +75,7 @@ const transformer = function (str, fn) {
   console.log(`Transformed by: ${fn.name}`);
 };
 
-transformer('JavaScript is the best', upperFirstWord); 
+transformer('JavaScript is the best', upperFirstWord);
 // u ovom slucaju upperFirstWord sluzi kao callback fn koja je pozvana preko transformera
 transformer('JavaScript is the best', oneWord);
 
@@ -87,3 +87,33 @@ const high5 = function () {
 document.body.addEventListener('click', high5);
 
 ['Jonas', 'Martha', 'Adam'].forEach(high5);
+
+const greet = function (greeting) {
+  return function (name) {
+    console.log(`${greeting} ${name} `);
+  };
+};
+
+const greeterHey = greet('Hey');
+greeterHey('Jonas');
+greeterHey('Steven');
+
+greet('Hello')('Jonas');
+
+//to isto sa arrow function
+const greetArr = greeting => name => console.log(`${greeting} ${name}`);
+
+greetArr('Hi')('Jonas');
+
+const lufthansa= {
+  airline: 'Lufthansa',
+  iatacode: 'LH',
+  bookings:[],
+  //book: function()
+  book(flightNum, name) {
+    console.log(`${name} booked a seat on ${this.flightNum} flight ${this.iatacode} ${flightNum}`)
+  }
+}
+
+lufthansa.book(232, 'Jonas Schemdtmn')
+lufthansa.book(474, 'Jon Naj')
