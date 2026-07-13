@@ -105,15 +105,35 @@ const greetArr = greeting => name => console.log(`${greeting} ${name}`);
 
 greetArr('Hi')('Jonas');
 
-const lufthansa= {
+const lufthansa = {
   airline: 'Lufthansa',
   iatacode: 'LH',
-  bookings:[],
+  bookings: [],
   //book: function()
   book(flightNum, name) {
-    console.log(`${name} booked a seat on ${this.flightNum} flight ${this.iatacode} ${flightNum}`)
-  }
-}
+    console.log(
+      `${name} booked a seat on ${this.flightNum} flight ${this.iatacode} ${flightNum}`,
+    );
+    this.bookings.push({ flight: `${this.iatacode} ${flightNum} }`, name });
+  },
+};
 
-lufthansa.book(232, 'Jonas Schemdtmn')
-lufthansa.book(474, 'Jon Naj')
+lufthansa.book(232, 'Jonas Schemdtmn');
+lufthansa.book(474, 'Jon SMith');
+console.log(lufthansa);
+
+const eurowings = {
+  name: 'Eurowings',
+  iatacode: 'EW',
+  bookings: [],
+};
+
+const book = lufthansa.book;
+
+// const book: (flightNum:any , name: any) => void
+// book(23, 'Sarah W');
+
+book.call(eurowings, 23, 'Sarah W'); 
+//call umjesto "this" da bi znali da li hocemo lufthansa ili eurowings
+
+
