@@ -112,7 +112,7 @@ const lufthansa = {
   //book: function()
   book(flightNum, name) {
     console.log(
-      `${name} booked a seat on ${this.flightNum} flight ${this.iatacode} ${flightNum}`,
+      `${name} booked a seat on ${flightNum} flight ${this.iatacode} ${flightNum}`,
     );
     this.bookings.push({ flight: `${this.iatacode} ${flightNum} }`, name });
   },
@@ -123,7 +123,7 @@ lufthansa.book(474, 'Jon SMith');
 console.log(lufthansa);
 
 const eurowings = {
-  name: 'Eurowings',
+  airline: 'Eurowings',
   iatacode: 'EW',
   bookings: [],
 };
@@ -133,7 +133,34 @@ const book = lufthansa.book;
 // const book: (flightNum:any , name: any) => void
 // book(23, 'Sarah W');
 
-book.call(eurowings, 23, 'Sarah W'); 
+//call  method
+book.call(eurowings, 23, 'Sarah W');
+console.log(eurowings);
 //call umjesto "this" da bi znali da li hocemo lufthansa ili eurowings
 
+book.call(lufthansa, 333, 'Mary Mery');
+console.log(lufthansa);
 
+const swiss = {
+  airline: 'Swiss airlines',
+  iatacode: 'LX',
+  bookings: [],
+};
+//apply method
+const flightData = [583, 'George Best'];
+book.apply(swiss, flightData);
+console.log(swiss);
+
+book.call(swiss, ...flightData);
+
+//bind method
+
+const bookEW = book.bind(eurowings);
+const bookLH = book.bind(lufthansa);
+const bookSW = book.bind(swiss);
+
+bookEW(23, 'Steven Gerrard');
+
+const bookEW23 = book.bind(eurowings, 23);
+bookEW23('Jonas Schmedtman');
+bookEW23('Martha Stuart');
