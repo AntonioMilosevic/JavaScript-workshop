@@ -112,9 +112,9 @@ const lufthansa = {
   //book: function()
   book(flightNum, name) {
     console.log(
-      `${name} booked a seat on ${flightNum} flight ${this.iatacode} ${flightNum}`,
+      `${name} booked a seat on flight ${this.iatacode} ${flightNum}`,
     );
-    this.bookings.push({ flight: `${this.iatacode} ${flightNum} }`, name });
+    this.bookings.push({ flight: `${this.iatacode} ${flightNum} `, name });
   },
 };
 
@@ -164,3 +164,18 @@ bookEW(23, 'Steven Gerrard');
 const bookEW23 = book.bind(eurowings, 23);
 bookEW23('Jonas Schmedtman');
 bookEW23('Martha Stuart');
+
+//With event listeners
+
+lufthansa.planes = 300;
+lufthansa.buyPlane = function () {
+  console.log(this);
+
+  this.planes++;
+  console.log(this.planes);
+};
+// lufthansa.buyPlane();
+
+document
+  .querySelector('.buy')
+  .addEventListener('click', lufthansa.buyPlane.bind(lufthansa));
