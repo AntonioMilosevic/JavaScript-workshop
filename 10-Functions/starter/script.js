@@ -237,3 +237,16 @@ document
 
 poll.displayResults.call({ answers: [5, 2, 3] }, 'string');
 poll.displayResults.call({ answers: [1, 5, 3, 9, 6, 1] }, 'string');
+
+const runOnce = function () {
+  console.log('This will run only once');
+};
+runOnce();
+
+//iife
+
+(function () {
+  console.log('This will run only once');
+})();
+
+(() => console.log('This will also run only once'))();
