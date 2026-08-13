@@ -266,3 +266,26 @@ const booker = secureBooking();
 booker();
 booker();
 booker();
+
+let f;
+const g = function () {
+  const a = 23;
+  f = function () {
+    console.log(a * 2);
+  };
+};
+
+const h = function () {
+  b = 777;
+  f = function () {
+    console.log(b * 2);
+  };
+};
+
+g();
+f();
+console.dir(f);
+
+f();
+h();
+console.dir(f);
