@@ -267,6 +267,7 @@ booker();
 booker();
 booker();
 
+// example 1
 let f;
 const g = function () {
   const a = 23;
@@ -276,7 +277,7 @@ const g = function () {
 };
 
 const h = function () {
-  b = 777;
+  const b = 777;
   f = function () {
     console.log(b * 2);
   };
@@ -289,3 +290,16 @@ console.dir(f);
 f();
 h();
 console.dir(f);
+
+// example 2
+const boardPassengers = function (n, wait) {
+  const perGroup = n / 3;
+
+  setTimeout = (function () {}, 1000);
+
+  console.log(`Will start boarding in ${wait} seconds`);
+};
+
+setTimeout(function () {
+  console.log('TIMER');
+}, 1000);
