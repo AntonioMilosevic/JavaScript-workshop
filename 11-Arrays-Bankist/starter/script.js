@@ -91,6 +91,14 @@ const movementsForUsd = [];
 for (const mov of movements) movementsForUsd.push(mov * eurToUsd);
 console.log(movementsForUsd);
 
+const movementsDescriptions = movements.map((mov, i, arr) => {
+  if (mov > 0) {
+    return `movement ${i + 1}:You deposited ${mov}`;
+  } else {
+    return `Movement ${i + 1}:You withdrew ${Math.abs(mov)}`;
+  }
+});
+console.log(movementsDescriptions);
 // const checkDogs = function (dogsJulia, dogsKate) {
 //   const dogsJuliaCorrected = dogsJulia.slice();
 //   dogsJuliaCorrected.splice(0, 1);
