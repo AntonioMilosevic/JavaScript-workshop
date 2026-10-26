@@ -77,6 +77,17 @@ const displayMovements = function (movements) {
 };
 displayMovements(account1.movements);
 
+const user = 'Steven ThOmas Williams'; //stw
+const username = user
+  .toLowerCase()
+  .split('  ')
+  .map(name=>name[0]) {
+    return name[0];
+  })
+  .join('');
+
+console.log(username);
+
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 const eurToUsd = 1.1;
 
